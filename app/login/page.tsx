@@ -1,4 +1,5 @@
 import SignInButton from "@/app/(components)/SignInButton";
+import { signInActionUsingGoogle } from "../(lib)/action";
 
 export const metadata = {
   title: "Login",
@@ -11,8 +12,8 @@ export default function Page() {
         Sign in to access your guest area
       </h2>
 
-      <SignInButton provider="google" />
-      <SignInButton provider="github" />
+      <SignInButton provider="google" action={signInActionUsingGoogle} />
+      <SignInButton provider="github" action={signInActionUsingGoogle} />
     </div>
   );
 }

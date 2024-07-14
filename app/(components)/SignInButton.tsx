@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { signInAction } from "@/app/(lib)/action";
 
-function SignInButton({ provider }: { provider: string }) {
+function SignInButton({ provider, action }: { provider: string; action: any }) {
   return (
-    <form action={signInAction}>
+    <form action={action}>
       <button className="flex items-center gap-6 text-lg border border-primary-300 px-10 py-4 font-medium">
         <Image
           src={`https://authjs.dev/img/providers/${provider}.svg`}

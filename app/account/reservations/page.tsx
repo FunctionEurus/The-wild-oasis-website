@@ -1,7 +1,6 @@
 import ReservationList from "@/app/(components)/ReservationList";
 import { auth } from "@/app/(lib)/auth";
 import { getBookings } from "@/app/(lib)/data-service";
-import { Booking } from "@/app/(types)/type";
 
 export const metadata = {
   title: "Reservations",

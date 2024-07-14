@@ -7,8 +7,12 @@ import { Booking, BookingData } from "../(types)/type";
 import { getBooking, getBookings } from "./data-service";
 import { supabase } from "./supabase";
 
-export async function signInAction() {
+export async function signInActionUsingGithub() {
   await signIn("github", { redirectTo: "/account" });
+}
+
+export async function signInActionUsingGoogle() {
+  await signIn("google", { redirectTo: "/account" });
 }
 
 export async function signOutAction() {
