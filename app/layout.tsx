@@ -1,9 +1,8 @@
-import Logo from "@/app/(components)/Logo";
-import Navigation from "@/app/(components)/Navigation";
 import "@/app/(styles)/globals.css";
 import { Josefin_Sans } from "next/font/google";
 import Header from "./(components)/Header";
 import { ReservationProvider } from "./(components)/ReservationContext";
+import { Analytics } from "@vercel/analytics/react";
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
@@ -34,6 +33,7 @@ export default function RootLayout({
         <div className="flex-1 px-8 py-12 grid">
           <main className="max-w-7xl mx-auto w-full">
             <ReservationProvider>{children}</ReservationProvider>
+            <Analytics />
           </main>
         </div>
       </body>
