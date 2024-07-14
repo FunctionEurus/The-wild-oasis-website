@@ -1,5 +1,8 @@
 import SignInButton from "@/app/(components)/SignInButton";
-import { signInActionUsingGoogle } from "../(lib)/action";
+import {
+  signInActionUsingGithub,
+  signInActionUsingGoogle,
+} from "../(lib)/action";
 
 export const metadata = {
   title: "Login",
@@ -13,7 +16,7 @@ export default function Page() {
       </h2>
 
       <SignInButton provider="google" action={signInActionUsingGoogle} />
-      <SignInButton provider="github" action={signInActionUsingGoogle} />
+      <SignInButton provider="github" action={signInActionUsingGithub} />
     </div>
   );
 }
