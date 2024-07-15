@@ -61,25 +61,27 @@ export default async function Page() {
       </div>
 
       <div className="col-span-3 grid grid-cols-3 gap-x-6 gap-y-8">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium col-span-3">
-          Managed by our family since 1962
-        </h1>
+        <div className="col-span-3">
+          <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+            Managed by our family since 1962
+          </h1>
 
-        <div className="space-y-8 col-span-3">
-          <p>
-            Since 1962, The Wild Oasis has been a cherished family-run retreat.
-            Started by our grandparents, this haven has been nurtured with love
-            and care, passing down through our family as a testament to our
-            dedication to creating a warm, welcoming environment.
-          </p>
-          <p>
-            Over the years, we&apos;ve maintained the essence of The Wild Oasis,
-            blending the timeless beauty of the mountains with the personal
-            touch only a family business can offer. Here, you&apos;re not just a
-            guest; you&apos;re part of our extended family. So join us at The
-            Wild Oasis soon, where tradition meets tranquility, and every visit
-            is like coming home.
-          </p>
+          <div className="space-y-8 col-span-3">
+            <p>
+              Since 1962, The Wild Oasis has been a cherished family-run
+              retreat. Started by our grandparents, this haven has been nurtured
+              with love and care, passing down through our family as a testament
+              to our dedication to creating a warm, welcoming environment.
+            </p>
+            <p>
+              Over the years, we&apos;ve maintained the essence of The Wild
+              Oasis, blending the timeless beauty of the mountains with the
+              personal touch only a family business can offer. Here, you&apos;re
+              not just a guest; you&apos;re part of our extended family. So join
+              us at The Wild Oasis soon, where tradition meets tranquility, and
+              every visit is like coming home.
+            </p>
+          </div>
         </div>
 
         <div className="col-span-2 col-start-2 aspect-square relative lg:hidden">
