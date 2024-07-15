@@ -1,6 +1,7 @@
 import Image from "next/image";
 import image1 from "@/public/about-1.jpg";
-import { getCabins } from "../(lib)/data-service";
+import { getCabins } from "@/app/(lib)/data-service";
+import Link from "next/link";
 
 export const metadata = {
   title: "About",
@@ -13,7 +14,7 @@ export default async function Page() {
   const cabinNum = await cabins.length;
 
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
+    <div className="grid text-lg items-center grid-cols-3 gap-x-6 gap-y-8 lg:grid-cols-5 lg:gap-x-24 lg:gap-y-32">
       <div className="col-span-3">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           Welcome to The Wild Oasis
@@ -50,7 +51,7 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-2 aspect-square relative">
+      <div className="col-span-2 col-start-2 hidden aspect-square relative lg:col-span-2 lg:block">
         <Image
           src="/about-2.jpg"
           fill
@@ -59,12 +60,12 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+      <div className="col-span-3 grid grid-cols-3 gap-x-6 gap-y-8">
+        <h1 className="text-4xl mb-10 text-accent-400 font-medium col-span-3">
           Managed by our family since 1962
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-8 col-span-3">
           <p>
             Since 1962, The Wild Oasis has been a cherished family-run retreat.
             Started by our grandparents, this haven has been nurtured with love
@@ -79,15 +80,24 @@ export default async function Page() {
             Wild Oasis soon, where tradition meets tranquility, and every visit
             is like coming home.
           </p>
+        </div>
 
-          <div>
-            <a
-              href="/cabins"
-              className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
-            >
-              Explore our luxury cabins
-            </a>
-          </div>
+        <div className="col-span-2 col-start-2 aspect-square relative lg:hidden">
+          <Image
+            src="/about-2.jpg"
+            fill
+            className="object-cover"
+            alt="Family that manages The Wild Oasis"
+          />
+        </div>
+
+        <div className="col-span-2">
+          <Link
+            href="/cabins"
+            className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+          >
+            Explore our luxury cabins
+          </Link>
         </div>
       </div>
     </div>
